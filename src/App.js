@@ -16,7 +16,7 @@ function App() {
             rel="noreferrer"
           >
             Open-coded
-          </a>
+          </a>{" "}
           by Pernille Lærke Munk-Hansen
         </footer>
       </div>
