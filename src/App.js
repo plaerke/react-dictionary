@@ -1,11 +1,21 @@
-import './App.css';
+import "./App.css";
+import Dictionary from "./Dictionary.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="hello-world">Hello world!</div>
-      </header>
+      <div className="container">
+        <header className="App-header">
+          <div className="hello-world">Hello world!</div>
+        </header>
+        <Dictionary />
+        <footer className="App-footer">
+          <a href="https://github.com/plaerke/react-dictionary" target="_blank">
+            Open-coded
+          </a>
+          by Pernille Lærke Munk-Hansen
+        </footer>
+      </div>
     </div>
   );
 }
