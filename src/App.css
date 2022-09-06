@@ -1,42 +1,81 @@
 .Title {
   text-align: center;
   padding: 50px 0 20px;
-  color: white;
-  font-weight: 200;
+  color: rgb(239, 148, 161);
+  font-weight: 300;
   font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 800;
 }
 
 .App {
-  background-color: lightpink;
+  background-color: rgb(252, 223, 227);
 }
 
 .container {
-  width: 70%;
-  background-color: lightpink;
+  width: 60%;
   border-radius: 7px;
 }
 
-footer {
-  margin-top: 30px;
+.Dictionary h4 {
   text-align: center;
+  font-size: medium;
+  font-weight: 300;
+  margin-bottom: 15px;
 }
 
 .Meaning h4 {
+  text-align: left;
   font-weight: 900;
+  color: lightpink;
 }
 
-input {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+.word-search-submit {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.word-search {
+  width: 80%;
   height: 40px;
-  border: 1px solid;
-  border-radius: 3px;
+  border: 1px solid lightpink;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: small;
+}
+
+.word-submit {
+  height: 40px;
+  border: 1px solid lightpink;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: lightpink;
+  color: white;
 }
 
 section {
   background-color: white;
+  padding: 20px;
+  margin: 10px 0 10px 0;
   border-radius: 7px;
-  padding: 15px;
-  margin: 20px 0 20px 0;
+}
+
+.Synonyms li {
+  color: lightpink;
+}
+
+.App-footer {
+  margin-top: 60px;
+  padding: 60px;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
+}
+
+a {
+  color: white;
 }
