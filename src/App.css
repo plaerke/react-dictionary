@@ -27,19 +27,14 @@ h2 {
   margin-bottom: 15px;
 }
 
-.Meaning h4 {
-  text-align: left;
-  font-weight: 900;
-  color: lightpink;
-}
-
 .word-search-submit {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
 .word-search {
-  width: 80%;
+  width: 50%;
   height: 40px;
   border: 1px solid lightpink;
   border-radius: 10px;
@@ -62,10 +57,7 @@ section {
   padding: 20px;
   margin: 10px 0 10px 0;
   border-radius: 7px;
-}
-
-.Synonyms li {
-  color: lightpink;
+  box-shadow: 5px 20px 20px rgb(255, 192, 203);
 }
 
 .App-footer {
@@ -78,4 +70,8 @@ section {
 
 a {
   color: white;
+}
+
+.Phonetic a {
+  padding-left: 10px;
 }

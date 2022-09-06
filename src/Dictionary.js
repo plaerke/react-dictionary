@@ -4,7 +4,7 @@ import axios from "axios";
 import Results from "./Results.js";
 
 export default function Dictionary() {
-  const [word, setWord] = useState("naughty");
+  const [word, setWord] = useState("crazy");
   const [wordData, setWordData] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
