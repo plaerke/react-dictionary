@@ -13,14 +13,27 @@ export default function Dictionary() {
     setWord(event.target.value);
   }
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setWordData(response.data[0]);
     setLoaded(true);
   }
 
+  function handlePexelsResponse(response) {
+    console.log(response.data);
+  }
+
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000012eb939c14058437a8e0539be359383d6";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=1`;
+    axios
+      .get(pexelsApiUrl, {
+        headers: { Authorization: `Bearer${pexelsApiKey}` },
+      })
+      .then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
