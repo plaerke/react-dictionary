@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results.js";
+import Photos from "./Photos.js";
 
 export default function Dictionary() {
   const [word, setWord] = useState("crazy");
   const [wordData, setWordData] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState({});
 
   function handleWordChange(event) {
     event.preventDefault();
@@ -20,6 +22,7 @@ export default function Dictionary() {
 
   function handlePexelsResponse(response) {
     console.log(response.data);
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -28,10 +31,10 @@ export default function Dictionary() {
 
     let pexelsApiKey =
       "563492ad6f917000010000012eb939c14058437a8e0539be359383d6";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=1`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=4`;
     axios
       .get(pexelsApiUrl, {
-        headers: { Authorization: `Bearer${pexelsApiKey}` },
+        headers: { Authorization: `Bearer ${pexelsApiKey}` },
       })
       .then(handlePexelsResponse);
   }
@@ -57,6 +60,7 @@ export default function Dictionary() {
           </div>
         </form>
         <Results data={wordData} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
