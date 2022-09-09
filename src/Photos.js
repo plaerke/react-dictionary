@@ -18,7 +18,6 @@ export default function Photos(props) {
                     src={photo.src.landscape}
                   />
                 </a>
-                ;
               </div>
             );
           })}
