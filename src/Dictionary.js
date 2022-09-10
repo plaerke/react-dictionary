@@ -8,7 +8,7 @@ export default function Dictionary() {
   const [word, setWord] = useState("crazy");
   const [wordData, setWordData] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [photos, setPhotos] = useState({});
+  const [photos, setPhotos] = useState(null);
 
   function handleWordChange(event) {
     event.preventDefault();
